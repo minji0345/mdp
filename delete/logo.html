@@ -8,10 +8,9 @@
     </head>
     <body>
             <div id="timer"></div>
-            <img id="img1" style="position:absolute; left:0; top:0; z-index:100;" src="img/box.png"/>
+            <img class="box" id="1" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)" src="img/box.png"/>
         <div>
-            <!--<div class="back-ar"><img src="img/fedex-ar.png"/></div>-->
-            <a href="logo2.html"><div class="circle"></div></a>
+            <a href="logo2.html"><div class="circle" ondragover="allowDrop();" ondrop="dropItem(event);"></div></a>
         </div>
 
         <script src="style.js"></script>
