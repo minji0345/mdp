@@ -12,14 +12,14 @@ function getMousePosition(e){
     // documentElement 가 안된다면 body 바꿔야 한다. 크롬의 경우.. (자동파악 로직 필요)
 }
 
-function moveImg(){
+function moveImg() {
     // 이미지 위치 파악하기
     var m_x = parseInt(document.getElementById('img1').style.left.replace('px', ''));
     var m_y = parseInt(document.getElementById('img1').style.top.replace('px', ''));
 
     // 이미지 움직이기
-    document.getElementById('img1').style.left = (Math.round(m_x + ((mouseX - m_x) / 2))-30) + 'px';
-    document.getElementById('img1').style.top =(Math.round(m_y + ((mouseY - m_y) / 2))-30) + 'px';
+    document.getElementById('img1').style.left = (Math.round(m_x + ((mouseX - m_x) / 2))-140) + 'px';
+    document.getElementById('img1').style.top =(Math.round(m_y + ((mouseY - m_y) / 2))-150) + 'px';
     
     // 기억해라 민지야ㅑㅑㅑ
     // 부드럽게 따라오는 공식 대략..
@@ -31,6 +31,7 @@ function moveImg(){
 
 document.onmousemove = getMousePosition; // 마우스가 움직이면 getMousePosition 함수 실행
 setInterval("moveImg()", 50); // moveImg 함수 반복 실행하여 이미지 움직이기
+
 
 var x = setInterval(function() {
     // min = parseInt(time/60); 분을 계산할 필요는 없으니까?
