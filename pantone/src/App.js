@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import Pantone from './components/Pantone';
+import ColorBox from "./components/Pantone";
 import Palette from "./components/Palette";
 
-const colors = ["#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61"];
+const colors = [ "#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61"];
 
 class App extends Component {
 
   state = {
-    color: "Click!",
+    color: "#PANTONE COLOR",
   };
 
   handleColor = (color) => {
@@ -29,6 +30,10 @@ class App extends Component {
       <Pantone color={color} 
         palette={
           <Palette colors={colors} selected={color} onSelect={handleColor} />
+        }
+
+        onMouseover={
+          <ColorBox color={color} onMouseover={handleColor}/>
         }
       >
         
