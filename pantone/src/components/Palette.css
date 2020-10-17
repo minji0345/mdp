@@ -16,26 +16,116 @@
 
 .palette {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    position: relative;
+    position: absolute;
     margin: 0 auto;
-    animation-name:fade;
-    animation-duration: 1s;
-    animation-delay: 1.5s;
+    animation-name:fade,slide-in-left;
+    animation-duration: 1s, 3s;
+    animation-delay: 1.5s, 1.5s;
     animation-fill-mode:both;
-    transition: all .3s ease
-    }
+    animation-iteration-count:1, infinite;
+    width: 100%;
+    justify-content: center;
+}
+
+.palette1 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 0 auto;
+    animation-name:fade,slide-in-right;
+    animation-duration: 1s, 3s;
+    animation-delay: 1.5s, 1.5s;
+    animation-fill-mode:both;
+    animation-iteration-count:1, infinite;
+    top:150px;
+    width: 100%;
+    justify-content: center;
+}
+
+.palette2 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 0 auto;
+    animation-name:fade,slide-in-right;
+    animation-duration: 1s, 5s;
+    animation-delay: 1.5s, 1.5s;
+    animation-fill-mode:both;
+    animation-iteration-count:1, infinite;
+    top:300px;
+    width: 100%;
+    justify-content: center;
+}
+
+.palette3 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 0 auto;
+    animation-name:fade,slide-in-left;
+    animation-duration: 1s, 3s;
+    animation-delay: 1.5s, 1.5s;
+    animation-fill-mode:both;
+    animation-iteration-count:1, infinite;
+    top:450px;
+    width: 100%;
+    justify-content: center;
+}
+
+.palette4 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 0 auto;
+    animation-name:fade,slide-in-left;
+    animation-duration: 1s, 5s;
+    animation-delay: 1.5s, 1.5s;
+    animation-fill-mode:both;
+    animation-iteration-count:1, infinite;
+    top:600px;
+    width: 100%;
+    justify-content: center;
+}
+
+.palette5 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 0 auto;
+    animation-name:fade,slide-in-right;
+    animation-duration: 1s, 3s;
+    animation-delay: 1.5s, 1.5s;
+    animation-fill-mode:both;
+    animation-iteration-count:1, infinite;
+    top:750px;
+    width: 100%;
+    justify-content: center;
+}
+.palette6 {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 0 auto;
+    animation-name:fade,slide-in-left;
+    animation-duration: 1s, 3s;
+    animation-delay: 1.5s, 1.5s;
+    animation-fill-mode:both;
+    animation-iteration-count:1, infinite;
+    top:900px;
+    width: 100%;
+    justify-content: center;
+}
     
 
-    .color {
+.color {
     width: 5rem;
     height: 5rem;
     opacity: 0.5;
     transition: all 0.2s;
     cursor: pointer;
-    border-radius: 50px;
-    margin: 15px;
+    border-radius: 2px;
+    margin: 10px;
     transition: all .3s ease
 }
 

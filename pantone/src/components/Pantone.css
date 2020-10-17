@@ -26,7 +26,7 @@
 .Pantone-box{
     background: white;
     margin: 0 auto;
-    width: 600px;
+    width: 500px;
     height: 500px;
     box-shadow: 0 0 0 rgba(0,0,0), 15px 15px 13px rgba(0,0,0,0.5);
     display: flex;
@@ -39,16 +39,17 @@
     transition: all .3s ease
 }
 
-.Palette-wrapper{
+/* .Palette-wrapper{
     width: 10%;
     padding: 2rem;
-    background: #0F4C81;
     color: white;
-    transition: all .3s ease
-}
+    transition: all .3s ease;
+    position: absolute;
+    background: transparent;
+} */
 
 .Colorbox-wrapper{
-    width: 90%;
+    width: 100%;
     font-size: 2.5rem;
     text-align: center;
     font-weight: 100;

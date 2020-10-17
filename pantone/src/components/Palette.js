@@ -15,9 +15,29 @@ const Palette = ({colors, selected, onSelect}) => {
         (color) => (<Color color={color} select={selected===color} onChange={() => onSelect(color)} key={color}/>)
     );
     return (
-        <div className="palette">
-            {colorList}
-        </div>
+        <>
+            <div className="palette">
+                {colorList}
+            </div>
+            <div className="palette1">
+                {colorList}
+            </div>
+            <div className="palette2">
+                {colorList}
+            </div>
+            <div className="palette3">
+                {colorList}
+            </div>
+            <div className="palette4">
+                {colorList}
+            </div>
+            <div className="palette5">
+                {colorList}
+            </div>
+            <div className="palette6">
+                {colorList}
+            </div>
+        </>
     );
 };
 

@@ -8,10 +8,10 @@ const Pantone = ({palette, color}) => {
 
     return (
         <div className="background" style={{ background: color }}>
-            <div className="Pantone-box">
-                <div className="Palette-wrapper" style={{ background: color }}>
+            <div className="Palette-wrapper" style={{ background: color }}>
                     {palette}
-                </div>
+            </div>
+            <div className="Pantone-box">
                 <div className="Colorbox-wrapper" >
                     <ColorBox color={color}/>
                     <div className="Colorname-wrapper" Colorbox>
