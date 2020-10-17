@@ -13,78 +13,38 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-.background{
-    width: 100%;
-    height: 1020px;
-    background: #0F4C81;
-    margin: 0;
-}
-
-.Pantone-box{
-    background: white;
-    margin: 0 auto;
-    width: 600px;
-    height: 500px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    display: flex;
-    position: relative;
-    top: 15%;
-    animation-name: slide-in-top, fade;
-    animation-duration: 1s, 1s;
-    animation-delay:0.4s, 0.4s;
-    animation-fill-mode: both, both;
-}
-
-.Palette-wrapper{
-    width: 10%;
-    padding: 2rem;
-    background: #0F4C81;
-    color: white;
-}
-
-.Colorbox-wrapper{
-    width: 90%;
-    font-size: 2.5rem;
-    text-align: center;
-    font-weight: 100;
-    background:white;
-    color: black;
+.palette {
     display: flex;
     flex-direction: column;
-    border: 6px solid white;
-}
-
-.ColorWindow-wrapper{
-    width: 100%;
-    height: 70%;
-    font-size: 2.5rem;
-    text-align: center;
-    font-weight: 100;
-    background-color:#0F4C81;
-    color: white;
-}
-
-.ColorWindow-wrapper:hover{
-    cursor: pointer;
-}
-
-.Colorname-wrapper{
-    width: 90%;
-    height: 25%;
-    font-size: 2.5rem;
-    text-align: left;
-    font-weight: 100;
-    background:white;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    align-items: center;
     position: relative;
-    left: 15px;
-    top: 15px;
+    margin: 0 auto;
     animation-name:fade;
     animation-duration: 1s;
     animation-delay: 1.5s;
     animation-fill-mode:both;
+    }
+    
+
+    .color {
+    width: 5rem;
+    height: 5rem;
+    opacity: 0.5;
+    transition: all 0.2s;
+    cursor: pointer;
+    border-radius: 50px;
+    margin: 15px;
 }
+
+.color:hover {
+    opacity: 0.75;
+    transform: translateY(-5px);
+}
+
+.color.active, .color:active {
+    opacity: 1;
+}
+
+/* .color + .color {
+    margin-left: 0.1rem;
+} */

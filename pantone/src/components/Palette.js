@@ -15,7 +15,7 @@ const Palette = ({colors, selected, onSelect}) => {
     );
     return (
         <div className="palette">
-        {colorList}
+            {colorList}
         </div>
     );
 };

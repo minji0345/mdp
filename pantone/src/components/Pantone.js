@@ -4,16 +4,19 @@ import './Pantone.css';
 
 const Pantone = ({palette, color, colorname, children}) => {
     return (
-        <div className="Pantone-box">
-            <div className="Palette-wrapper">
-                {palette}
-            </div>
-            <div className="Colorbox-wrapper">
-                <div className="ColorWindow-wrapper">
-                    {color}
+        <div className="background">
+            {color}
+            <div className="Pantone-box">
+                <div className="Palette-wrapper">
+                    {palette}
                 </div>
-                <div className="Colorname-wrapper" Colorbox>
-                    
+                <div className="Colorbox-wrapper">
+                    <div className="ColorWindow-wrapper">
+                        {color}
+                    </div>
+                    <div className="Colorname-wrapper" Colorbox>
+                        PANTONE
+                    </div>
                 </div>
             </div>
         </div>
