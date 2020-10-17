@@ -1,8 +1,5 @@
 import React from 'react';
-import ColorBox from './ColorBox';
 import './Pantone.css';
-
-// 박스안을 마우스가 돌아다닐 때 미세하게 변하는 컬러들 
 
 const Pantone = ({palette, color}) => {
 
@@ -13,8 +10,9 @@ const Pantone = ({palette, color}) => {
             </div>
             <div className="Pantone-box">
                 <div className="Colorbox-wrapper" >
-                    <ColorBox color={color}/>
-                    <div className="Colorname-wrapper" Colorbox>
+                    <div className="ColorWindow-wrapper" style={{ background: color}}>
+                    </div>
+                    <div className="Colorname-wrapper">
                         <div>PANTONE</div>
                         <div className="Colorname" style={{ color }}>{color}</div>
                     </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import './Palette.css';
 
 const Color = ({ color, select, onChange }) => {
-    // 컬러클래스 즉 원을 를 클릭하면  우리가 이름 붙인 함수가 실행되는 것 순서가 반대로!
     return (
         <div className={`color ${select && 'active'}`} style={{ background: color}} onMouseOver={onChange}> 
         
