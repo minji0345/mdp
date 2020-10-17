@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import fedex from './img/fedex.png';
+import box from './img/box.png';
+
 
 function App() {
+
+  
+
+  const style = {
+    backgroungColor : 'white',
+  };
+
+  const handleMouseOver = (e) =>{
+
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={style}>
+      <img class="fedex" src={fedex}></img>
+      <img class="box" src={box}></img>
     </div>
   );
 }

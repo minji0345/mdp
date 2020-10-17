@@ -1,5 +1,4 @@
 var time = 20;
-var min = " ";
 var sec = " ";
 
 allowDrop = function(event) {
@@ -9,7 +8,7 @@ allowDrop = function(event) {
     dropItem = function(event) {
         var _targetEle = event.target;
         var _id = event.dataTransfer.getData('text');
-        var _moveEle = document.getElementById(_id );
+        var _moveEle = document.getElementById(_id);
         _targetEle.before(_moveEle);
     };
     
@@ -17,7 +16,7 @@ allowDrop = function(event) {
         var _thisEle = ev.target;
         var _thisId = _thisEle.id;
         _thisEle.classList.add('is-dragging');
-        //클래스 조절가능
+        //클래스 조절가능!!  추후에 이미지 바꾸고 사용
         event.dataTransfer.setData('text/plain', _thisId);
     };
     
@@ -27,7 +26,6 @@ allowDrop = function(event) {
     };
 
 var x = setInterval(function() {
-    // min = parseInt(time/60); 분을 계산할 필요는 없으니까?
     sec = time % 60;
 
     document.getElementById("timer").innerHTML = `${sec}sec`;
