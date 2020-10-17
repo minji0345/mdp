@@ -1,4 +1,5 @@
 import React from 'react';
+import Colorbox from './ColorBox';
 import './Pantone.css';
 
 const Pantone = ({palette, color, colorname, children}) => {
@@ -11,8 +12,8 @@ const Pantone = ({palette, color, colorname, children}) => {
                 <div className="ColorWindow-wrapper">
                     {color}
                 </div>
-                <div className="Colorname-wrapper">
-                    {colorname}
+                <div className="Colorname-wrapper" Colorbox>
+                    
                 </div>
             </div>
         </div>
