@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,10 @@
   to {
     transform: rotate(360deg);
   }
+} 
+기존 css  적용사항*/
+
+body {
+  margin: 0;
+  background-color: #0F4C81;
 }

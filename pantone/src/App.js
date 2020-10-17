@@ -1,11 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Pantone from './components/Pantone';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+const colors = ["#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61"];
+
+class App extends Component {
+  
+  render() {
+    return (
+      <Pantone>
+        
+      </Pantone>
+    )
+  }
+}
+
+export default App;
+
+{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,9 +30,4 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+      </header> */}
