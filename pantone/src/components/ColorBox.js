@@ -1,12 +1,16 @@
 import React from 'react';
 // import './Colorbox.css';
 
-const Colorbox = () => {
-    return (
-            <div>
-                PANTONE
-            </div>
-            )
-        }
+const ColorBox = ({colors, color, onChange, selected, onSelect}) => {
+    
+    // const makeGradient = colors.randomItem(
+    //     (color) => (<Color color={color} select={selected===color} onChange={() => onSelect(color)} key={color}/>)
+    // );
 
-export default Colorbox;
+    return (
+        <div className="ColorWindow" style={{ background: color}} onMouseOver={onChange}>
+            
+        </div>
+    )
+}
+export default ColorBox;

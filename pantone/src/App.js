@@ -33,7 +33,7 @@ class App extends Component {
         }
 
         onMouseover={
-          <ColorBox color={color} onMouseover={handleColor}/>
+          <ColorBox color={color} selected={color} onSelect={handleColor} onMouseover={handleColor}/>
         }
       >
         

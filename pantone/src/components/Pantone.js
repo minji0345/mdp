@@ -1,16 +1,8 @@
 import React from 'react';
-import Colorbox from './ColorBox';
+import ColorBox from './ColorBox';
 import './Pantone.css';
 
-const ColorBox = ({color, onMouseOverr}) => {
-
-    return (
-        <div className="ColorWindow" style={{ background: color}} onMouseOver={onMouseOverr}>
-        
-        </div>
-    )
-    }
-// 박스안을 마우스가 돌아다닐 때 미세하게 변하는 컬르들 
+// 박스안을 마우스가 돌아다닐 때 미세하게 변하는 컬러들 
 
 const Pantone = ({palette, color}) => {
 
@@ -21,9 +13,7 @@ const Pantone = ({palette, color}) => {
                     {palette}
                 </div>
                 <div className="Colorbox-wrapper" >
-                    <div className="ColorWindow-wrapper">
-                        <ColorBox color={color}/>
-                    </div>
+                    <ColorBox color={color}/>
                     <div className="Colorname-wrapper" Colorbox>
                         <div>PANTONE</div>
                         <div className="Colorname" style={{ color }}>{color}</div>
