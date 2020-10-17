@@ -35,7 +35,7 @@ class App extends Component {
         }
 
         colorbox={
-          <ColorBox color={color} selected={color} onSelect={handleColor} onMouseover={handleColor}/>
+          <ColorBox color={color}/>
         }>
         
       </Pantone>

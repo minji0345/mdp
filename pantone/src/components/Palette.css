@@ -19,7 +19,7 @@
     flex-direction: row-reverse;
     align-items: center;
     position: absolute;
-    margin: 0 auto;
+    margin: 0;
     animation-name:fade,slide-in-left;
     animation-duration: 1s, 3s;
     animation-delay: 1.5s, 1.5s;
@@ -33,7 +33,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    margin: 0 auto;
+    margin: 0;
     animation-name:fade,slide-in-right;
     animation-duration: 1s, 3s;
     animation-delay: 1.5s, 0.5s;
@@ -49,7 +49,7 @@
     flex-direction: row-reverse;
     align-items: center;
     position: absolute;
-    margin: 0 auto;
+    margin: 0;
     animation-name:fade,slide-in-right;
     animation-duration: 1s, 5s;
     animation-delay: 1.5s, 1.5s;
@@ -64,7 +64,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    margin: 0 auto;
+    margin: 0;
     animation-name:fade,slide-in-left;
     animation-duration: 1s, 3s;
     animation-delay: 1.5s, 0.3s;
@@ -80,7 +80,7 @@
     flex-direction: row-reverse;
     align-items: center;
     position: absolute;
-    margin: 0 auto;
+    margin: 0;
     animation-name:fade,slide-in-left;
     animation-duration: 1s, 5s;
     animation-delay: 1.5s, 1.5s;
@@ -96,10 +96,10 @@
     flex-direction: row-reverse;
     align-items: center;
     position: absolute;
-    margin: 0 auto;
+    margin: 0;
     animation-name:fade,slide-in-right;
     animation-duration: 1s, 3s;
-    animation-delay: 1.5s, 1.5s;
+    animation-delay: 1.5s, 1.2s;
     animation-fill-mode:both;
     animation-iteration-count:1, infinite;
     top:750px;
@@ -110,7 +110,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    margin: 0 auto;
+    margin: 0;
     animation-name:fade,slide-in-left;
     animation-duration: 1s, 3s;
     animation-delay: 1.5s, 1s;
