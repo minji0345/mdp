@@ -5,6 +5,7 @@ import ColorBox from "./components/Pantone";
 import Palette from "./components/Palette";
 
 const colors = [ "#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61"];
+const pantonecolors = [ "#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61","#F7CAC9","#955251","#B163A3","#009473","#DD4124"];
 
 class App extends Component {
 
@@ -27,15 +28,15 @@ class App extends Component {
     } = this;
 
     return (
-      <Pantone color={color} 
+      <Pantone 
+        color={color} 
         palette={
           <Palette colors={colors} selected={color} onSelect={handleColor} />
         }
 
-        onMouseover={
+        colorbox={
           <ColorBox color={color} selected={color} onSelect={handleColor} onMouseover={handleColor}/>
-        }
-      >
+        }>
         
       </Pantone>
     )
