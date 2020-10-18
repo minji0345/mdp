@@ -10,7 +10,7 @@ const ColorBox = ({color, onMouseOverr}) => {
         </div>
     )
     }
-// 박스안을 마우스가 돌아다닐 때 미세하게 변하는 컬르들 
+
 
 const Pantone = ({palette, color}) => {
 
