@@ -8,7 +8,7 @@ const Pantone = ({palette, color}) => {
             <div className="Palette-wrapper" style={{ backgroundImage:`linear-gradient(${color},black)` }}>
                     {palette}
             </div>
-            {/* <div className="Pantone-box">
+            <div className="Pantone-box">
                 <div className="Colorbox-wrapper" >
                     <div className="ColorWindow-wrapper" style={{ background: color}}>
                     </div>
@@ -17,7 +17,7 @@ const Pantone = ({palette, color}) => {
                         <div className="Colorname" style={{ color }}>{color}</div>
                     </div>
                 </div>
-            </div> */}
+            </div> 
         </div>
     );
 };
