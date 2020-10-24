@@ -4,8 +4,8 @@ import './Pantone.css';
 const Pantone = ({palette, color}) => {
 
     return (
-        <div className="pantoneback" id="pantoneback" style={{ background: color }}>
-            <div className="Palette-wrapper" style={{ backgroundImage:`linear-gradient(${color},${color2})` }}>
+        <div className="pantoneback" id="pantoneback" style={{ background: "black"}}>
+            <div className="Palette-wrapper" style={{ backgroundImage:`linear-gradient(${color},black)` }}>
                     {palette}
             </div>
             {/* <div className="Pantone-box">

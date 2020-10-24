@@ -1,7 +1,7 @@
 import React from 'react';
 import './Palette.css';
 
-const Color = ({ color, select, onChange }) => {
+const Color = ({ color, select, onChange  }) => {
     return (
         <div className={`color ${select && 'active'}`} style={{ background: color}} onClick={onChange}> 
         

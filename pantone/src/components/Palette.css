@@ -117,8 +117,8 @@
     
 
 .color {
-    width: 8rem;
-    height: 8rem;
+    width: 5rem;
+    height: 5rem;
     opacity: 0.5;
     transition: all 0.2s;
     cursor: pointer;
@@ -127,15 +127,17 @@
 }
 
 .color:hover {
-    opacity: 1;
-    transform: translateY(-5px);
+    cursor: pointer;
+    opacity: 0.5;
+    /* transform: translateY(-5px); */
     transition: all .3s ease
 }
 
 .color.active, .color:active {
-    opacity: 1;
+    cursor: pointer;
+    opacity: 0.5;
     box-shadow: 0 0 0 rgba(0,0,0), 1px 7px 5px rgba(0,0,0,0.5);
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
 }
 
 .palette-base{
