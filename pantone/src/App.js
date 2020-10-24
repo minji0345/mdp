@@ -10,6 +10,11 @@ const colors = [ "#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61","#F7CAC9","#955251",
 
 const App = () => {
 
+  // const radomColor = Math.floor(Math.random()*colors.length);
+  // const target = colors.indexOf(randomColor);
+  //이렇게 랜덤하게 컬러 지정하는거 안되는지?
+  
+
   const [color, setColor] = useState("#PANTONE COLOR");
 
   const handleColor = (color) => {
