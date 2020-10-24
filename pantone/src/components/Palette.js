@@ -3,7 +3,7 @@ import './Palette.css';
 
 const Color = ({ color, select, onChange }) => {
     return (
-        <div className={`color ${select && 'active'}`} style={{ background: color}} onClick={onChange}> 
+        <div className={`color ${select && 'active'}`} style={{ background: color}} onMouseOver={onChange}> 
         
         </div>
     )

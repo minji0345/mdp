@@ -19,54 +19,54 @@ const App = () => {
 
   const { x,y } = useMousePosition();
 
-  useEffect(()=>{
-    const frameImg = document.getElementById('frame-img');
-    frameImg.style.position = 'absolute';
-    frameImg.style.top = (y-200)+'px';
-    frameImg.style.left = (x-250)+'px';
+  // useEffect(()=>{
+  //   const frameImg = document.getElementById('frame-img');
+  //   frameImg.style.position = 'absolute';
+  //   frameImg.style.top = (y-200)+'px';
+  //   frameImg.style.left = (x-250)+'px';
 
-  },[x,y])
+  // },[x,y])
 
-  function getPosition( el ) {
-    var _x = 0;
-    var _y = 0;
-    while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-        _x += el.offsetLeft - el.scrollLeft;
-        _y += el.offsetTop - el.scrollTop;
-        el = el.offsetParent;
-    }
-    return { xPos: _x, yPos: _y,  };
-  }
+  // function getPosition( el ) {
+  //   var _x = 0;
+  //   var _y = 0;
+  //   while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
+  //       _x += el.offsetLeft - el.scrollLeft;
+  //       _y += el.offsetTop - el.scrollTop;
+  //       el = el.offsetParent;
+  //   }
+  //   return { xPos: _x, yPos: _y,  };
+  // }
 
-  useEffect(()=>{
-    const colors = document.getElementsByClassName('color');
-    let filteredColors = [];
+  // useEffect(()=>{
+  //   const colors = document.getElementsByClassName('color');
+  //   let filteredColors = [];
 
-    for (let color of colors) {
-      const { xPos,yPos }= getPosition(color);
-      if (xPos<x+200 && xPos>=x-150 && yPos<y+200 && yPos>=y-100) {
-        filteredColors.push(color)
-      }
-    }
+  //   for (let color of colors) {
+  //     const { xPos,yPos }= getPosition(color);
+  //     if (xPos<x+200 && xPos>=x-150 && yPos<y+200 && yPos>=y-100) {
+  //       filteredColors.push(color)
+  //     }
+  //   }
     
-    for (let color of colors) {
-      if (filteredColors.includes(color)) {
-        color.style.zIndex = 6;
-        color.style.opacity = 1;
-      }
-      else {
-        color.style.zIndex = 1;
-        color.style.opacity = 0;
-      }
-    }
+  //   for (let color of colors) {
+  //     if (filteredColors.includes(color)) {
+  //       color.style.zIndex = 6;
+  //       color.style.opacity = 1;
+  //     }
+  //     else {
+  //       color.style.zIndex = 1;
+  //       color.style.opacity = 0;
+  //     }
+  //   }
 
-  },[x,y])
+  // },[x,y])
 
 
 
   return (
     <body>
-      <img className="frame" id="frame-img" src={frame} style={{zIndex:'5'}} />
+      {/* <img className="frame" id="frame-img" src={frame} style={{zIndex:'5'}} /> */}
       <Pantone 
         color={color} 
         palette={
