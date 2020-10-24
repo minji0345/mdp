@@ -14,7 +14,7 @@ const Palette = ({colors, selected, onSelect}) => {
         (color) => (<Color color={color} select={selected===color} onChange={() => onSelect(color)} key={color}/>)
     );
     return (
-        <>
+        <div className="palette-base">
             <div className="palette">
                 {colorList}
             </div>
@@ -36,7 +36,7 @@ const Palette = ({colors, selected, onSelect}) => {
             <div className="palette6">
                 {colorList}
             </div>
-        </>
+        </div>
     );
 };
 

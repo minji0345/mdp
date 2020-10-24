@@ -7,8 +7,6 @@ import Palette from "./components/Palette";
 import frame from './frame.png';
 
 const colors = [ "#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61","#F7CAC9","#955251","#B163A3","#009473","#DD4124","#D94F70","#45B5AA","#F0C05A","#5A5B9F","#9B1B30","#DECDBE","#53B0AE"];
-const pantonecolors = [ "#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61","#F7CAC9","#955251","#B163A3","#009473","#DD4124"];
-
 const App = () => {
 
   const [color, setColor] = useState("#PANTONE COLOR");
@@ -23,7 +21,7 @@ const App = () => {
     const frameImg = document.getElementById('frame-img');
     frameImg.style.position = 'absolute';
     frameImg.style.top = (y-200)+'px';
-    frameImg.style.left = (x-250)+'px';
+    frameImg.style.left = (x-260)+'px';
 
   },[x,y])
 
@@ -44,7 +42,7 @@ const App = () => {
 
     for (let color of colors) {
       const { xPos,yPos }= getPosition(color);
-      if (xPos<x+200 && xPos>=x-150 && yPos<y+200 && yPos>=y-100) {
+      if (xPos<x+200 && xPos>=x-150 && yPos<y+200 && yPos>=y-150) {
         filteredColors.push(color)
       }
     }
@@ -52,11 +50,11 @@ const App = () => {
     for (let color of colors) {
       if (filteredColors.includes(color)) {
         color.style.zIndex = 6;
-        color.style.opacity = 1;
+        color.style.opacity = 0;
       }
       else {
         color.style.zIndex = 1;
-        color.style.opacity = 0;
+        color.style.opacity = 0.5;
       }
     }
 
@@ -70,7 +68,7 @@ const App = () => {
       <Pantone 
         color={color} 
         palette={
-          <Palette colors={colors} selected={color} onSelect={handleColor} />
+          <Palette colors={colors} selected={color} onSelect={handleColor}  className="frame" id="frame-img"/>
         }
         colorbox={
           <ColorBox color={color}/>
