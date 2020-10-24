@@ -41,7 +41,7 @@ const App = () => {
   useEffect(()=>{
     const colors = document.getElementsByClassName('color');
     let filteredColors = [];
-    // console.log('mouse', x,y)
+
     for (let color of colors) {
       const { xPos,yPos }= getPosition(color);
       if (xPos<x+200 && xPos>=x-150 && yPos<y+200 && yPos>=y-100) {
@@ -56,7 +56,7 @@ const App = () => {
       }
       else {
         color.style.zIndex = 1;
-        color.style.opacity = 0.3;
+        color.style.opacity = 0;
       }
     }
 
