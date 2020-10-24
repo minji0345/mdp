@@ -27,47 +27,39 @@ const App = () => {
 
   },[x,y])
 
-  const getPosition = (el) => {
-    var xPos = 0;
-    var yPos = 0;
-
-    while (el) {
-      if (el.tagName == "BODY") {
-        // deal with browser quirks with body/window/document and page scroll
-        var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
-        var yScroll = el.scrollTop || document.documentElement.scrollTop;
-        xPos += (el.offsetLeft - xScroll + el.clientLeft);
-        yPos += (el.offsetTop - yScroll + el.clientTop);
-      } else {
-        // for all other non-BODY elements
-        xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
-        yPos += (el.offsetTop - el.scrollTop + el.clientTop);
-      }
-      el = el.offsetParent;
+  function getPosition( el ) {
+    var _x = 0;
+    var _y = 0;
+    while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
+        _x += el.offsetLeft - el.scrollLeft;
+        _y += el.offsetTop - el.scrollTop;
+        el = el.offsetParent;
     }
-    return {
-      xPos: xPos,
-      yPos: yPos
-    };
+    return { xPos: _x, yPos: _y,  };
   }
 
   useEffect(()=>{
     const colors = document.getElementsByClassName('color');
     let filteredColors = [];
-    for (var color of colors) {
-      const {xPos,yPos}= getPosition(color);
-      // if (xPos<=50 && yPos<=60) {
-      //   filteredColors.push(color)
-      // }
-      console.log('element position', xPos, yPos)
-      
+    // console.log('mouse', x,y)
+    for (let color of colors) {
+      const { xPos,yPos }= getPosition(color);
+      if (xPos<x+200 && xPos>=x-150 && yPos<y+200 && yPos>=y-100) {
+        filteredColors.push(color)
+      }
     }
-    console.log(filteredColors)
-    console.log('mouse pos', x,y)
-    filteredColors.forEach((color)=>{
-      color.style.opacity = 1;
-    })
     
+    for (let color of colors) {
+      if (filteredColors.includes(color)) {
+        color.style.zIndex = 6;
+        color.style.opacity = 1;
+      }
+      else {
+        color.style.zIndex = 1;
+        color.style.opacity = 0.3;
+      }
+    }
+
   },[x,y])
 
 
