@@ -17,19 +17,64 @@ const App = () => {
     setColor(color);
   };
 
-  const { x, y } = useMousePosition();
+  const { x,y } = useMousePosition();
 
   useEffect(()=>{
     const frameImg = document.getElementById('frame-img');
     frameImg.style.position = 'absolute';
-    frameImg.style.top = (y-250)+'px';
-    frameImg.style.left = (x-280)+'px';
+    frameImg.style.top = (y-200)+'px';
+    frameImg.style.left = (x-250)+'px';
 
   },[x,y])
 
+  const getPosition = (el) => {
+    var xPos = 0;
+    var yPos = 0;
+
+    while (el) {
+      if (el.tagName == "BODY") {
+        // deal with browser quirks with body/window/document and page scroll
+        var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+        var yScroll = el.scrollTop || document.documentElement.scrollTop;
+        xPos += (el.offsetLeft - xScroll + el.clientLeft);
+        yPos += (el.offsetTop - yScroll + el.clientTop);
+      } else {
+        // for all other non-BODY elements
+        xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+        yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+      }
+      el = el.offsetParent;
+    }
+    return {
+      xPos: xPos,
+      yPos: yPos
+    };
+  }
+
+  useEffect(()=>{
+    const colors = document.getElementsByClassName('color');
+    let filteredColors = [];
+    for (var color of colors) {
+      const {xPos,yPos}= getPosition(color);
+      // if (xPos<=50 && yPos<=60) {
+      //   filteredColors.push(color)
+      // }
+      console.log('element position', xPos, yPos)
+      
+    }
+    console.log(filteredColors)
+    console.log('mouse pos', x,y)
+    filteredColors.forEach((color)=>{
+      color.style.opacity = 1;
+    })
+    
+  },[x,y])
+
+
+
   return (
     <body>
-      <img className="frame" id="frame-img" src={frame} />
+      <img className="frame" id="frame-img" src={frame} style={{zIndex:'5'}} />
       <Pantone 
         color={color} 
         palette={

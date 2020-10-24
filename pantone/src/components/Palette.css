@@ -20,11 +20,11 @@
     align-items: center;
     position: absolute;
     margin: 0;
-    animation-name:fade,slide-in-left;
+    /* animation-name:fade,slide-in-left;
     animation-duration: 1s, 3s;
     animation-delay: 1.5s, 1.5s;
     animation-fill-mode:both;
-    animation-iteration-count:1, infinite;
+    animation-iteration-count:1, infinite; */
     width: 100%;
     justify-content: center;
 }
@@ -34,11 +34,11 @@
     align-items: center;
     position: absolute;
     margin: 0;
-    animation-name:fade,slide-in-right;
+    /* animation-name:fade,slide-in-right;
     animation-duration: 1s, 3s;
     animation-delay: 1.5s, 0.5s;
     animation-fill-mode:both;
-    animation-iteration-count:1, infinite;
+    animation-iteration-count:1, infinite; */
     top:150px;
     width: 100%;
     justify-content: center;
@@ -50,11 +50,11 @@
     align-items: center;
     position: absolute;
     margin: 0;
-    animation-name:fade,slide-in-right;
+    /* animation-name:fade,slide-in-right;
     animation-duration: 1s, 5s;
     animation-delay: 1.5s, 1.5s;
     animation-fill-mode:both;
-    animation-iteration-count:1, infinite;
+    animation-iteration-count:1, infinite; */
     top:300px;
     width: 100%;
     justify-content: center;
@@ -65,11 +65,11 @@
     align-items: center;
     position: absolute;
     margin: 0;
-    animation-name:fade,slide-in-left;
+    /* animation-name:fade,slide-in-left;
     animation-duration: 1s, 3s;
     animation-delay: 1.5s, 0.3s;
     animation-fill-mode:both;
-    animation-iteration-count:1, infinite;
+    animation-iteration-count:1, infinite; */
     top:450px;
     width: 100%;
     justify-content: center;
@@ -81,11 +81,11 @@
     align-items: center;
     position: absolute;
     margin: 0;
-    animation-name:fade,slide-in-left;
+    /* animation-name:fade,slide-in-left;
     animation-duration: 1s, 5s;
     animation-delay: 1.5s, 1.5s;
     animation-fill-mode:both;
-    animation-iteration-count:1, infinite;
+    animation-iteration-count:1, infinite; */
     top:600px;
     width: 100%;
     justify-content: center;
@@ -97,11 +97,11 @@
     align-items: center;
     position: absolute;
     margin: 0;
-    animation-name:fade,slide-in-right;
+    /* animation-name:fade,slide-in-right;
     animation-duration: 1s, 3s;
     animation-delay: 1.5s, 1.2s;
     animation-fill-mode:both;
-    animation-iteration-count:1, infinite;
+    animation-iteration-count:1, infinite; */
     top:750px;
     width: 100%;
     justify-content: center;
@@ -111,11 +111,11 @@
     align-items: center;
     position: absolute;
     margin: 0;
-    animation-name:fade,slide-in-left;
+    /* animation-name:fade,slide-in-left;
     animation-duration: 1s, 3s;
     animation-delay: 1.5s, 1s;
     animation-fill-mode:both;
-    animation-iteration-count:1, infinite;
+    animation-iteration-count:1, infinite; */
     top:900px;
     width: 100%;
     justify-content: center;
@@ -126,6 +126,7 @@
     width: 5rem;
     height: 5rem;
     opacity: 0.5;
+    /* display: none; */
     transition: all 0.2s;
     cursor: pointer;
     border-radius: 2px;
