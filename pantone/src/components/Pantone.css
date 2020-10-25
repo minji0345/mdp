@@ -91,12 +91,17 @@
     border-right: solid 30px white;
 }
 
+.title{
+    position: relative;
+    top:-10%;
+}
+
 .Colorname{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 30px;
     position: relative;
-    top:-5%;
+    top:-10%;
 
 }
 
@@ -105,7 +110,7 @@
     font-weight: 300;
     font-size: 18px;
     position: relative;
-    top:-27%;
+    top:-30%;
     left: 1%;
 }
 
