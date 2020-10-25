@@ -16,8 +16,9 @@ const Pantone = ({palette, color}) => {
                     <div className="ColorWindow-wrapper" style={{ background: color, zIndex:'5'}}>
                     </div>
                     <div className="Colorname-wrapper">
-                        <div>PANTONE</div>
+                        <div style={{ color }}>PANTONE</div>
                         <div className="Colorname" style={{ color }}>{color}</div>
+                        <span>Find your color and click!</span>
                     </div>
                 </div>
             </div> 
