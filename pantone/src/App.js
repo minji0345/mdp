@@ -57,7 +57,6 @@ const App = () => {
       if (filteredColors.includes(color)) {
         color.style.zIndex = 6;
         color.style.opacity = 0;
-        color.style.background = `${color}`;
       }
       else {
         color.style.zIndex = 4;
@@ -89,7 +88,7 @@ const App = () => {
 // 마우스기 지나다니는 곳, 즉 프레임 안은 색이 컬러가 되도록 
   return (
     <body>
-      <img className="frame" id="frame-img" src={frame} style={{zIndex:'5'}}/>
+      
       <img className="life" id="life-img" src={life} style={{zIndex:'3'}}/>
       
       <Pantone 
