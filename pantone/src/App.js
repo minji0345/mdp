@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import useMousePosition from './useMousePosition';
 import Pantone from './components/Pantone';
-import ColorBox from "./components/Pantone";
 import Palette from "./components/Palette";
 import frame from './frame.png';
 
@@ -74,7 +73,7 @@ const App = () => {
 
   return (
     <body>
-      <img className="frame" id="frame-img" src={frame} style={{zIndex:'5'}} />
+      <img className="frame" id="frame-img" src={frame} style={{zIndex:'5'}}/>
       <Pantone 
         color={color} 
         palette={
