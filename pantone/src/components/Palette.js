@@ -3,7 +3,7 @@ import './Palette.css';
 
 const Color = ({ color, select, onChange, onRevert  }) => {
     return (
-        <div className={`color ${select && 'active'}`} style={{ backgroundImage:`radial-gradient(${color} 30%, rgba(0,0,0,0) 70%)`}} onClick={onChange} onMouseDown={onRevert}> 
+        <div className={`color ${select && 'active'}`} style={{ background: color }} onClick={onChange} onMouseDown={onRevert}> 
         
         </div>
     )
@@ -16,26 +16,60 @@ const Palette = ({colors, selected, onSelect, onRevert}) => {
     return (
         <div className="palette-base">
             <div className="palette">
-                {colorList}
+                {colorList}{colorList}{colorList}
             </div>
             <div className="palette1">
-                {colorList}
+                {colorList} {colorList}{colorList}
             </div>
             <div className="palette2">
-                {colorList}
+                {colorList}{colorList}{colorList}
             </div>
             <div className="palette3">
-                {colorList}
+                {colorList}{colorList}{colorList}
             </div>
             <div className="palette4">
-                {colorList}
+                {colorList}{colorList}{colorList}
             </div>
             <div className="palette5">
-                {colorList}
+                {colorList}{colorList}{colorList}
             </div>
             <div className="palette6">
-                {colorList}
+                {colorList}{colorList}{colorList}
             </div>
+            <div className="palette5">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette4">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette3">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette2">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette1">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette6">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette5">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette4">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette3">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette2">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette1">
+                {colorList}{colorList}{colorList}
+            </div>
+            
         </div>
     );
 };

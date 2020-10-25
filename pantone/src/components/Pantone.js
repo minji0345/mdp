@@ -6,8 +6,7 @@ const Pantone = ({palette, color}) => {
 
 
     return (
-        <div className="pantoneback" id="pantoneback" style={{ backgroundImage:`linear-gradient(${color},black)`}}>
-            <img className="back" id="frame-img" src={back}/>
+        <div className="pantoneback" id="pantoneback" style={{ background: 'black'}}>
             <div className="Palette-wrapper"
             // style={{ backgroundImage:`linear-gradient(${color},black)`}}
             >
