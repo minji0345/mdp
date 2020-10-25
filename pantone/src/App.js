@@ -27,7 +27,7 @@ const App = () => {
     const frameImg = document.getElementById('frame-img');
     frameImg.style.position = 'absolute';
     frameImg.style.top = (y-180)+'px';
-    frameImg.style.left = (x-250)+'px';
+    frameImg.style.left = (x-170)+'px';
 
   },[x,y])
 
@@ -48,7 +48,7 @@ const App = () => {
 
     for (let color of colors) {
       const { xPos,yPos }= getPosition(color);
-      if (xPos<x+150 && xPos>=x-150 && yPos<y+150 && yPos>=y-150) {
+      if (xPos<x+180 && xPos>=x-180 && yPos<y+180 && yPos>=y-180) {
         filteredColors.push(color)
       }
     }
@@ -60,7 +60,7 @@ const App = () => {
       }
       else {
         color.style.zIndex = 4;
-        color.style.opacity = 1;
+        color.style.opacity = 0.8;
       }
     }
 

@@ -11,7 +11,7 @@ const Pantone = ({palette, color}) => {
             >
                     {palette}
             </div>
-            <div className="frame Pantone-box" id="frame-img" style={{zIndex:'5'}}>
+            <div className="frame Pantone-box" id="frame-img" style={{ zIndex:'5'}}>
                 <div className="Colorbox-wrapper" >
                     <div className="ColorWindow-wrapper" style={{ background: color, zIndex:'5'}}>
                     </div>
