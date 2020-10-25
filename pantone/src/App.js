@@ -25,7 +25,7 @@ const App = () => {
   useEffect(()=>{
     const frameImg = document.getElementById('frame-img');
     frameImg.style.position = 'absolute';
-    frameImg.style.top = (y-200)+'px';
+    frameImg.style.top = (y-150)+'px';
     frameImg.style.left = (x-220)+'px';
 
   },[x,y])
@@ -47,7 +47,7 @@ const App = () => {
 
     for (let color of colors) {
       const { xPos,yPos }= getPosition(color);
-      if (xPos<x+100 && xPos>=x-100 && yPos<y+100 && yPos>=y-100) {
+      if (xPos<x+80 && xPos>=x-80 && yPos<y+80 && yPos>=y-80) {
         filteredColors.push(color)
       }
     }
