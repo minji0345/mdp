@@ -3,7 +3,7 @@ import './Palette.css';
 
 const Color = ({ color, select, onChange, onRevert  }) => {
     return (
-        <div className={`color ${select && 'active'}`} style={{ backgroundImage:`radial-gradient(${color} 30%, rgba(0,0,0,0) 70%)`}} onMouseOver={onChange} onMouseDown={onRevert}> 
+        <div className={`color ${select && 'active'}`} style={{ backgroundImage:`radial-gradient(${color} 30%, rgba(0,0,0,0) 70%)`}} onClick={onChange} onMouseDown={onRevert}> 
         
         </div>
     )

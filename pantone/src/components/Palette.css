@@ -122,15 +122,20 @@
     opacity: 0.5;
     transition: all 0.2s;
     cursor: pointer;
-    /*margin: 10px;*/
-    transition: all .3s ease
+    margin: 15px;
+    transition: all .3s ease;
 }
 
 .color:hover {
     cursor: pointer;
     opacity: 0.5;
     /* transform: translateY(-5px); */
-    transition: all .3s ease
+    transition: all .3s ease;
+    animation-name:pulsate-fwd;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode:both;
+    animation-iteration-count:infinite;
 }
 
 .color.active, .color:active {
