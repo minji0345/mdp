@@ -69,6 +69,12 @@ const Palette = ({colors, selected, onSelect, onRevert}) => {
             <div className="palette1">
                 {colorList}{colorList}{colorList}
             </div>
+            <div className="palette1">
+                {colorList}{colorList}{colorList}
+            </div>
+            <div className="palette1">
+                {colorList}{colorList}{colorList}
+            </div>
             
         </div>
     );
