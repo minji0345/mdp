@@ -1,17 +1,17 @@
 import React from 'react';
 import './Palette.css';
 
-const Color = ({ color, select, onChange  }) => {
+const Color = ({ color, select, onChange, onRevert  }) => {
     return (
-        <div className={`color ${select && 'active'}`} style={{ background: color}} onClick={onChange}> 
+        <div className={`color ${select && 'active'}`} style={{ background: color}} onMouseOver={onChange} onClick={onRevert}> 
         
         </div>
     )
     }
 
-const Palette = ({colors, selected, onSelect}) => {
+const Palette = ({colors, selected, onSelect, onRevert}) => {
     const colorList = colors.map(
-        (color) => (<Color color={color} select={selected===color} onChange={() => onSelect(color)} key={color}/>)
+        (color) => (<Color onRevert={onRevert} color={color} select={selected===color} onChange={() => onSelect(color)} key={color} onRevert={onRevert}/>)
     );
     return (
         <div className="palette-base">

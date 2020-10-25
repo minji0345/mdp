@@ -66,6 +66,10 @@ const App = () => {
 
   },[x,y])
 
+  const onRevert = () => {
+    const paletteWrapper = document.getElementsByClassName('Pantone-box');
+    paletteWrapper.style.display = 'flex';
+  }
 
 
   return (
@@ -74,11 +78,12 @@ const App = () => {
       <Pantone 
         color={color} 
         palette={
-          <Palette colors={colors} selected={color} onSelect={handleColor}  className="frame" id="frame-img"/>
+          <Palette onSelect={onRevert} colors={colors} selected={color} onSelect={handleColor}  className="frame" id="frame-img"/>
         }
-        colorbox={
-          <ColorBox color={color}/>
-        }>
+        // colorbox={
+        //   <ColorBox color={color}/>
+        // }
+        >
       </Pantone>
     </body>
   )
