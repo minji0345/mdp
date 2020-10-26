@@ -31,7 +31,7 @@
     margin: 0 auto;
     width: 400px;
     height: 500px;
-    box-shadow: 0 0 0 rgba(0,0,0), 15px 15px 13px rgba(0,0,0,0.5);
+    box-shadow: 0 0 15 rgba(0,0,0.8), 15px 15px 13px rgba(0,0,0,0.8);
     display: flex;
     position: absolute;
     /* animation-name: slide-in-top, fade;
@@ -58,6 +58,7 @@
     display: flex;
     flex-direction: column;
     border: 15px solid white;
+    box-shadow: 0 0 15 rgba(0,0,0.8), 15px 15px 13px rgba(0,0,0,0.8);
     /* z-index: 8 !important; */
 }
 

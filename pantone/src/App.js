@@ -60,7 +60,7 @@ const App = () => {
       }
       else {
         color.style.zIndex = 4;
-        color.style.opacity = 0.8;
+        color.style.opacity = 1;
       }
     }
 
