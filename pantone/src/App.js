@@ -38,19 +38,19 @@ const App = () => {
     setImgIndex(idx);
   };
 
-  // function fadeIn(time) {
-  //   const life = document.getElementsByClassName('life');
-  //   life.style.opacity = 0;
-  //   var last = +new Date();
-  //   var tick = function() {
-  //     life.style.opacity = +life.style.opacity + (new Date() - last) / time;
-  //     last = +new Date();
-  //     if (+life.style.opacity < 1) {
-  //       (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
-  //     }
-  //   };
-  //   tick();
-  // }
+  function fadeIn(time) {
+    const life = document.getElementsByClassName('life');
+    life.style.opacity = 0;
+    var last = +new Date();
+    var tick = function() {
+      life.style.opacity = +life.style.opacity + (new Date() - last) / time;
+      last = +new Date();
+      if (+life.style.opacity < 1) {
+        (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+      }
+    };
+    tick();
+  }
 
   const handleColor = (color) => {
     setColor(color);
