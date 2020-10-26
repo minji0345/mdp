@@ -76,7 +76,6 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-   
     margin: 0;
     /* animation-name:fade,slide-in-left;
     animation-duration: 1s, 5s;
@@ -144,4 +143,5 @@
     height: 1020px;
     display: flex;
     flex-direction: column;
+    background: black;
 }

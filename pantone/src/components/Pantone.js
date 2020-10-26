@@ -1,16 +1,16 @@
 import React from 'react';
 import './Pantone.css';
 
-const Pantone = ({palette, color}) => {
+const Pantone = ({palette, color, ready}) => {
 
 
     return (
         <div className="pantoneback" id="pantoneback" style={{ background: color}}>
-            <div className="Palette-wrapper" style={{ background: 'black', zIndex:'4'}}
+            <div className="Palette-wrapper" style={{ backgroundColor: 'black', zIndex:'4'}}
             >
                     {palette}
             </div>
-            <div className="frame Pantone-box" id="frame-img" style={{ zIndex:'5'}}>
+            <div className="frame Pantone-box" id="frame-img" style={{ zIndex:'5'}} onClick={ready}>
                 <div className="Colorbox-wrapper" >
                     <div className="ColorWindow-wrapper" style={{ background: color, zIndex:'5'}}>
                     </div>
