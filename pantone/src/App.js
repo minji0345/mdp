@@ -38,20 +38,6 @@ const App = () => {
     setImgIndex(idx);
   };
 
-  function fadeIn(time) {
-    const life = document.getElementsByClassName('life');
-    life.style.opacity = 0;
-    var last = +new Date();
-    var tick = function() {
-      life.style.opacity = +life.style.opacity + (new Date() - last) / time;
-      last = +new Date();
-      if (+life.style.opacity < 1) {
-        (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
-      }
-    };
-    tick();
-  }
-
   const handleColor = (color) => {
     setColor(color);
   };
@@ -65,8 +51,8 @@ const App = () => {
       frameImg.style.top = (300)+'px';
       frameImg.style.left = (660)+'px';
     } else {
-      frameImg.style.top = (y-180)+'px';
-      frameImg.style.left = (x-170)+'px';
+      frameImg.style.top = (y-100)+'px';
+      frameImg.style.left = (x-100)+'px';
     }
 
   },[x,y])
@@ -94,7 +80,7 @@ const App = () => {
     } else {
       for (let color of colors) {
         const { xPos,yPos }= getPosition(color);
-        if (xPos<x+180 && xPos>=x-180 && yPos<y+180 && yPos>=y-180) {
+        if (xPos<x+100 && xPos>=x-100 && yPos<y+100 && yPos>=y-100) {
           filteredColors.push(color)
         }
       }
