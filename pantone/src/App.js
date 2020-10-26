@@ -3,7 +3,6 @@ import './App.css';
 import useMousePosition from './useMousePosition';
 import Pantone from './components/Pantone';
 import Palette from "./components/Palette";
-import frame from './frame.png';
 import life from './components/life.jpg';
 
 const colors = [ "#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61","#F7CAC9","#955251","#B163A3","#009473","#DD4124","#D94F70","#45B5AA","#F0C05A","#5A5B9F","#9B1B30","#DECDBE","#53B0AE"];

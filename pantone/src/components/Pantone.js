@@ -1,6 +1,5 @@
 import React from 'react';
 import './Pantone.css';
-import back from './back.jpg';
 
 const Pantone = ({palette, color}) => {
 
