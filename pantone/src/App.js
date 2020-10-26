@@ -61,8 +61,13 @@ const App = () => {
   useEffect(()=>{
     const frameImg = document.getElementById('frame-img');
     frameImg.style.position = 'absolute';
-    frameImg.style.top = (y-180)+'px';
-    frameImg.style.left = (x-170)+'px';
+    if(!ready) {
+      frameImg.style.top = (300)+'px';
+      frameImg.style.left = (660)+'px';
+    } else {
+      frameImg.style.top = (y-180)+'px';
+      frameImg.style.left = (x-170)+'px';
+    }
 
   },[x,y])
 

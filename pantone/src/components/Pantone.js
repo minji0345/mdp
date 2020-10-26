@@ -17,7 +17,7 @@ const Pantone = ({palette, color, ready}) => {
                     <div className="Colorname-wrapper">
                         <div className="title" style={{ color }}>PANTONE</div>
                         <div className="Colorname" style={{ color }}>{color}</div>
-                        <span>Find your color and click!</span>
+                        <span>Find your color and <b>click!</b></span>
                     </div>
                 </div>
             </div> 
