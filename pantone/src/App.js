@@ -51,8 +51,8 @@ const App = () => {
       frameImg.style.top = (300)+'px';
       frameImg.style.left = (660)+'px';
     } else {
-      frameImg.style.top = (y-100)+'px';
-      frameImg.style.left = (x-100)+'px';
+      frameImg.style.top = (y-50)+'px';
+      frameImg.style.left = (x-50)+'px';
     }
 
   },[x,y])
@@ -80,7 +80,7 @@ const App = () => {
     } else {
       for (let color of colors) {
         const { xPos,yPos }= getPosition(color);
-        if (xPos<x+100 && xPos>=x-100 && yPos<y+100 && yPos>=y-100) {
+        if (xPos<x+30 && xPos>=x-30 && yPos<y+30 && yPos>=y-30) {
           filteredColors.push(color)
         }
       }
@@ -88,7 +88,7 @@ const App = () => {
       for (let color of colors) {
         if (filteredColors.includes(color)) {
           color.style.zIndex = 6;
-          color.style.opacity = 0;
+          color.style.opacity = 0.3;
         }
         else {
           color.style.zIndex = 4;
