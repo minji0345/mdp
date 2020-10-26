@@ -80,7 +80,7 @@ const App = () => {
     } else {
       for (let color of colors) {
         const { xPos,yPos }= getPosition(color);
-        if (xPos<x+30 && xPos>=x-30 && yPos<y+30 && yPos>=y-30) {
+        if (xPos<x+50 && xPos>=x-50 && yPos<y+50 && yPos>=y-50) {
           filteredColors.push(color)
         }
       }
