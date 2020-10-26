@@ -62,7 +62,7 @@ const App = () => {
     const frameImg = document.getElementById('frame-img');
     frameImg.style.position = 'absolute';
     if(!ready) {
-      frameImg.style.top = (300)+'px';
+      frameImg.style.top = (200)+'px';
       frameImg.style.left = (660)+'px';
     } else {
       frameImg.style.top = (y-180)+'px';
