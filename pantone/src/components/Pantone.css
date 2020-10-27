@@ -73,7 +73,7 @@
 .ColorWindow-wrapper{
     width: 100%;
     height: 75%;
-    opacity: 1;
+    opacity: 0.2;
     color: white;
     transition: all .3s ease;
 }

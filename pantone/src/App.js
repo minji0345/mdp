@@ -45,15 +45,15 @@ const App = () => {
   const { x,y } = useMousePosition();
 
   useEffect(()=>{
-    const frameImg = document.getElementById('frame-img');
+    const frameImg = document.getElementById('frame-img2');
     frameImg.style.position = 'absolute';
 
     if(!ready) {
       frameImg.style.top = (300)+'px';
       frameImg.style.left = (660)+'px';
     } else {
-      frameImg.style.top = (y-50)+'px';
-      frameImg.style.left = (x-50)+'px';
+      frameImg.style.top = (300)+'px';
+      frameImg.style.left = (660)+'px';
     }
 
   },[x,y])
@@ -70,6 +70,7 @@ const App = () => {
   }
 
   useEffect(()=>{
+    
     const colors = document.getElementsByClassName('color');
     let filteredColors = [];
     
@@ -94,7 +95,7 @@ const App = () => {
         }
         else {
           color.style.zIndex = 4;
-          color.style.opacity = 0;
+          color.style.opacity = 0.5;
           color.style.borderColor = 'black';
         }
       }
