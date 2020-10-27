@@ -47,6 +47,7 @@ const App = () => {
   useEffect(()=>{
     const frameImg = document.getElementById('frame-img');
     frameImg.style.position = 'absolute';
+
     if(!ready) {
       frameImg.style.top = (300)+'px';
       frameImg.style.left = (660)+'px';
