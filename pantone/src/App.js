@@ -3,7 +3,6 @@ import './App.css';
 import useMousePosition from './useMousePosition';
 import Pantone from './components/Pantone';
 import Palette from "./components/Palette";
-import frame from './frame.png';
 import back0 from './components/back0.jpg';
 import back1 from './components/back1.jpg';
 import back2 from './components/back2.jpg';
@@ -15,10 +14,6 @@ import back5 from './components/back5.jpg';
 const colors = [ "#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61","#F7CAC9","#955251","#B163A3","#009473","#DD4124","#D94F70","#45B5AA","#F0C05A","#5A5B9F","#9B1B30","#DECDBE","#53B0AE"];
 
 const App = () => {
-
-  // const radomColor = Math.floor(Math.random()*colors.length);
-  // const target = colors.indexOf(randomColor);
-  //이렇게 랜덤하게 컬러 지정하는거 안되는지?
   
 
   const [color, setColor] = useState("#PANTONE COLOR");
@@ -118,21 +113,7 @@ const App = () => {
     setReady(false);
     setColor("#PANTONE COLOR");
   }
-  // useEffect(()=>{
-  //   const life = document.getElementsByClassName('life');
-
-  //     const { xPos,yPos }= getPosition(life);
-  //     if (xPos<x+80 && xPos>=x-80 && yPos<y+80 && yPos>=y-80) {
-  //       life.style.zIndex = 7;
-  //       life.style.opacity = 1;
-  //   } else {
-  //       color.style.zIndex = 1;
-  //       color.style.opacity = 0;
-  //     }
-  // },[x,y])
-
-
-// 마우스기 지나다니는 곳, 즉 프레임 안은 색이 컬러가 되도록 
+  
   return (
     <body>
       
