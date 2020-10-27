@@ -1,7 +1,7 @@
 import React from 'react';
 import './Pantone.css';
 
-const Pantone = ({palette, color, ready}) => {
+const Pantone = ({palette, color, ready, notReady}) => {
 
 
     return (
@@ -10,7 +10,7 @@ const Pantone = ({palette, color, ready}) => {
             >
                     {palette}
             </div>
-            <div className="frame Pantone-box" id="frame-img" style={{ zIndex:'5'}} onClick={ready}>
+            <div className="frame Pantone-box" id="frame-img" style={{ zIndex:'5'}} onClick={ready} onDoubleClick={notReady} >
                 <div className="Colorbox-wrapper" >
                     <div className="ColorWindow-wrapper" style={{ background: color, zIndex:'5'}}>
                     </div>

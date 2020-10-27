@@ -38,20 +38,6 @@ const App = () => {
     setImgIndex(idx);
   };
 
-  function fadeIn(time) {
-    const life = document.getElementsByClassName('life');
-    life.style.opacity = 0;
-    var last = +new Date();
-    var tick = function() {
-      life.style.opacity = +life.style.opacity + (new Date() - last) / time;
-      last = +new Date();
-      if (+life.style.opacity < 1) {
-        (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
-      }
-    };
-    tick();
-  }
-
   const handleColor = (color) => {
     setColor(color);
   };
@@ -116,6 +102,10 @@ const App = () => {
   const onReady = () => {
     setReady(true);
   }
+
+  const onNotReady = () => {
+    setReady(false);
+  }
   // useEffect(()=>{
   //   const life = document.getElementsByClassName('life');
 
@@ -129,10 +119,6 @@ const App = () => {
   //     }
   // },[x,y])
 
-  const onRevert = () => {
-    const paletteWrapper = document.getElementsByClassName('Pantone-box');
-    paletteWrapper.style.display = 'flex';
-  }
 
 // 마우스기 지나다니는 곳, 즉 프레임 안은 색이 컬러가 되도록 
   return (
@@ -148,9 +134,9 @@ const App = () => {
       <Pantone 
         color={color} 
         palette={
-          <Palette onSelect={onRevert} colors={colors} selected={color} onSelect={handleColor}  className="frame" id="frame-img"/>
+          <Palette colors={colors} selected={color} onSelect={handleColor}  className="frame" id="frame-img" notReady={onNotReady}/>
         }
-        ready={onReady}
+        ready={onReady} notReady={onNotReady}
         >
       </Pantone>
 
