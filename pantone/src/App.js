@@ -71,6 +71,7 @@ const App = () => {
   useEffect(()=>{
     const colors = document.getElementsByClassName('color');
     let filteredColors = [];
+    
 
     if(!ready) {
       for (let color of colors) {
@@ -88,11 +89,12 @@ const App = () => {
       for (let color of colors) {
         if (filteredColors.includes(color)) {
           color.style.zIndex = 6;
-          color.style.opacity = 0.3;
+          color.style.opacity = 0.2;
         }
         else {
           color.style.zIndex = 4;
           color.style.opacity = 0;
+          color.style.borderColor = 'black';
         }
       }
     }

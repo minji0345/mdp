@@ -6,7 +6,7 @@ const Pantone = ({palette, color, ready}) => {
 
     return (
         <div className="pantoneback" id="pantoneback" style={{ background: color}}>
-            <div className="Palette-wrapper" style={{ backgroundColor: 'black', zIndex:'4'}}
+            <div className="Palette-wrapper" style={{ backgroundColor: 'black'}}
             >
                     {palette}
             </div>
