@@ -101,10 +101,22 @@ const App = () => {
 
   const onReady = () => {
     setReady(true);
+    const colorWindow= document.getElementById('ColorWindowWrapper');
+    colorWindow.style.opacity= 0.2;
   }
 
   const onNotReady = () => {
+    const colorName= document.getElementById('ColornameWrapper');
+    colorName.style.color= 'black';
+
+    const colorName2= document.getElementById('ColornameWrapper2');
+    colorName2.style.color= 'black';
+
+    const colorWindow= document.getElementById('ColorWindowWrapper');
+    colorWindow.style.opacity= 0;
+
     setReady(false);
+    setColor("#PANTONE COLOR");
   }
   // useEffect(()=>{
   //   const life = document.getElementsByClassName('life');

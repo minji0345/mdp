@@ -12,11 +12,11 @@ const Pantone = ({palette, color, ready, notReady}) => {
             </div>
             <div className="frame Pantone-box" id="frame-img" style={{ zIndex:'5'}} onClick={ready} onDoubleClick={notReady} >
                 <div className="Colorbox-wrapper" >
-                    <div className="ColorWindow-wrapper" style={{ background: color, zIndex:'5'}}>
+                    <div className="ColorWindow-wrapper" id="ColorWindowWrapper" style={{ background: color, zIndex:'5'}}>
                     </div>
                     <div className="Colorname-wrapper">
-                        <div className="title" style={{ color }}>PANTONE</div>
-                        <div className="Colorname" style={{ color }}>{color}</div>
+                        <div className="title" id="ColornameWrapper" style={{ color }}>PANTONE</div>
+                        <div className="Colorname" id="ColornameWrapper2" style={{ color }}>{color}</div>
                         <span>Find your color and <b>click!</b></span>
                     </div>
                 </div>
