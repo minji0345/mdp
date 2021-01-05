@@ -83,7 +83,7 @@
     margin: 0;
     animation-name:fade,slide-in-left;
     animation-duration: 1s, 5s;
-    animation-delay: 1.5s, 1.5s;
+    animation-delay: 1.5s, 1.4s;
     animation-fill-mode:both;
     animation-iteration-count:1, infinite;
     top:600px;
