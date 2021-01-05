@@ -16,9 +16,9 @@ const colors = [ "#92A8D1", "#88B04B", "#5F4B8B", "#FF6F61","#F7CAC9","#955251",
 
 const App = () => {
 
-  // const radomColor = Math.floor(Math.random()*colors.length);
-  // const target = colors.indexOf(randomColor);
-  //이렇게 랜덤하게 컬러 지정하는거 안되는지?
+  // const randomColor = colors[Math.floor(Math.random()*colors.length)];
+  // //이렇게 랜덤하게 컬러 지정하는거 안되는지?
+  // console.log(randomColor);
   
 
   const [color, setColor] = useState("#PANTONE COLOR");
@@ -59,8 +59,8 @@ const App = () => {
   },[x,y])
 
   function getPosition( el ) {
-    var _x = 0;
-    var _y = 0;
+    let _x = 0;
+    let _y = 0;
     while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
         _x += el.offsetLeft - el.scrollLeft;
         _y += el.offsetTop - el.scrollTop;
@@ -136,7 +136,7 @@ const App = () => {
       <img className="life" id="life-img" src={back5} alt="img" style={imgIndex === 5 ? {zIndex:'3'} : {display: "none"}}/>
 
       <Pantone 
-        color={color} 
+        color={color}
         palette={
           <Palette onSelect={onRevert} colors={colors} selected={color} onSelect={handleColor}  className="frame" id="frame-img"/>
         }
